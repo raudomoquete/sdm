@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from 'src/app/models/vehicle';
+import { VehicleService } from 'src/app/services/vehicle.service';
+
 
 @Component({
   selector: 'app-vehicles',
@@ -7,9 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiclesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public vehicleService: VehicleService) { }
 
   ngOnInit(): void {
+      
   }
-
 }

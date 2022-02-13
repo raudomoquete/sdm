@@ -1,0 +1,40 @@
+.make-model {
+    text-transform: uppercase;    
+}
+
+.list button {
+    cursor: pointer;
+    background-color: #EEE;
+    border-radius: 4px;
+}
+
+.list button:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+}
+
+p {
+    text-transform: uppercase;
+    background-color: lightgrey;
+    padding: 6px;
+}
+
+td {
+    text-transform: uppercase;
+    padding: 6px;
+    text-decoration: solid;
+}
+
+.detail {
+    justify-content:left;
+}
+
+.car-description {
+    justify-content:center;
+}
+
+.images{
+    width: 300px;
+    border-radius: 2em;
+}

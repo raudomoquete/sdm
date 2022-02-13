@@ -1,0 +1,43 @@
+<div class="container">
+     <form [formGroup]="form">   <!--(ngSubmit)="GetCars()"-->
+        <div class="form-group">
+           <label for="year">Year</label>
+           <select formControlName="year" class="form-control">
+               <option disabled>Selecciona el a;o</option>
+               <option *ngFor="let vehicle of vehicleService.list">{{ vehicle.year }}</option>
+           </select>
+        </div>
+        <div class="form-group">
+            <label for="horsePower">Caballos de fuerza</label>
+            <select formControlName="horsePower" class="form-control">
+                <option disabled>Selecciona los caballos de fuerza</option>
+                <option *ngFor="let vehicle of vehicleService.list">{{ vehicle.horsepower }}</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label for="make">Marca</label>
+            <select formControlName="make" class="form-control">
+                <option disabled>Marca</option>
+                <option *ngFor="let vehicle of vehicleService.list">{{ vehicle.make }}</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label for="model">Modelo</label>
+            <select formControlName="model" class="form-control">
+                <option disabled>Modelo</option>
+                <option *ngFor="let vehicle of vehicleService.list">{{ vehicle.model }}</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label for="price">Precio</label>
+            <select formControlName="price" class="form-control">
+                <option disabled>Precio</option>
+                <option *ngFor="let vehicle of vehicleService.list">{{ vehicle.price }}</option>
+            </select>
+         </div>
+    
+        <div class="form group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Search</button>
+        </div>
+    </form>
+</div>
