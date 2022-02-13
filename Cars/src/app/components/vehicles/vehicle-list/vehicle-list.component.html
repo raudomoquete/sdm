@@ -1,47 +1,55 @@
- <div class="container">
-     <div class="row">
-         <div class="search-car">
-             <input class="form-control" type="text" name="search" [(ngModel)]="searchText"
-             autocomplete="off" placeholder=" Start searching for a car by make or model">
-         </div>
-     </div>
- <form [formGroup]="form" (ngSubmit)="carDetails()">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="list">
-                <div *ngFor="let vehicle of vehicleService.list | filter: searchText | paginate:
-                        {itemsPerPage: 3, currentPage: p}">        
-                    <div class="make-model">
-                        {{ vehicle.make }}
-                        {{ vehicle.model }}
-                    </div>
-                    <span class="car-img">
-                        <img class="images" src={{vehicle.img_url}}/>
-                    </span>
-                    <br>
-                    <br>
-                    <tr>
-                        <button [class.selected]="vehicle === selectedCar" type="button"
-                        (click)="onSelect(vehicle)">Details</button>
-                    </tr>
-                </div>
-                <pagination-controls (pageChange)="p = $event"></pagination-controls>
-            </div>
-        </div>
-        <br>
-        <div class="col-md-6">
-            <div class="detail">
-                <tr *ngIf="selectedCar">
-                    <td>{{ selectedCar.make | uppercase }} Details</td>
-                    <br>
-                    <div class="car-description">
-                        <p>Model: {{ selectedCar.model }}</p>
-                        <p>Price: {{ selectedCar.price }}</p>
-                        <p>Horse Power: {{ selectedCar.horsepower }}</p>
-                    </div>
-                </tr>
+<div class="container">
+    <div class="b-searchBar">
+        <div class="row">
+            <div class="search-car">
+                <input class="form-control" type="text" name="search" [(ngModel)]="searchText"
+                autocomplete="off" placeholder=" Start searching for a car by make or model">
             </div>
         </div>
     </div>
-</form>
+    <form [formGroup]="form" (ngSubmit)="carDetails()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="list">
+                    <div *ngFor="let vehicle of vehicleService.list | filter: searchText | paginate:
+                            {itemsPerPage: 3, currentPage: p}">  
+                        <div class="list_item">
+                            <div class="make-model">
+                                {{ vehicle.make }}
+                                {{ vehicle.model }}
+                            </div>
+                            <span class="car-img">
+                                <img class="images" src={{vehicle.img_url}}/>
+                            </span>
+                            <br>
+                            <br>
+                            <tr>
+                                <button [class.selected]="vehicle === selectedCar" type="button"
+                                (click)="onSelect(vehicle)">Details</button>
+                            </tr>
+                        </div>
+                    </div>
+                    <br>
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    
+                </div>
+            </div>
+            <br>
+            <div class="col-md-6">
+                <div class="detail">
+                    <div class="car_detail">
+                        <tr *ngIf="selectedCar">
+                            <td>{{ selectedCar.make | uppercase }} Details</td>
+                            <br>
+                            <div class="car-description">
+                                <p>Model: {{ selectedCar.model }}</p>
+                                <p>Price: {{ selectedCar.price }}</p>
+                                <p>Horse Power: {{ selectedCar.horsepower }}</p>
+                            </div>
+                        </tr>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

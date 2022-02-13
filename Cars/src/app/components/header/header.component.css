@@ -1,0 +1,68 @@
+.b-topBar {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.b-topBar__addr,
+.b-topBar__tel {
+    padding: 20px 0 20px 0;
+    font: 600 12px 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    border-right: 1px solid #eeeeee;
+}
+
+.b-topBar__addr {
+    padding-left: 35px;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    margin-right: 10px;
+}
+
+.b-topBar__addr span.fa,
+.b-topBar__tel span.fa {
+    font-size: 17px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.b-topBar__nav li {
+    float: right;
+    list-style: none;
+    padding: 20px 0;
+    font: 300 12px 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.b-nav {
+    padding: 30px 0 25px;
+    position: relative;
+    z-index: 99;
+}
+
+.b-nav__logo {
+    float: left;
+    padding: 8px 0 0 5px;
+    text-transform: uppercase;
+}
+
+.b-nav__logo h3 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 20px
+}
+
+.b-nav__logo h3 a {
+    text-decoration: none;
+    font: 700 26px 'Titillium Web', sans-serif;
+}
+
+.b-nav__logo h2 {
+    margin: 0;
+    line-height: 15px;
+    font-size: 11px;
+    margin-top: -5px;
+}
+
+.b-nav__logo h2 a {
+    font: 300 11px 'Open Sans', sans-serif;
+    text-decoration: none;
+}

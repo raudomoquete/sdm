@@ -1,6 +1,19 @@
-.footer {
+.b-footer {
+    padding: 40px 0;
+}
+
+.b-footer__company p {
+    font: 600 12px 'Open Sans', sans-serif;
+    margin: 0 0 0 0;
+}
+
+.b-footer {
     position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.b-footer__content-nav ul li a {
+    font: 400 12px 'Open Sans', sans-serif;
 }
